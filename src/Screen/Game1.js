@@ -94,7 +94,7 @@ const Game1 = ({ navigation }) => {
             </View>
             <View style={{ margin: 30, borderRadius: 10, backgroundColor: '#FFFFFF', width: '85%', flexDirection: 'row', height: 60 }} >
 
-                <TextInput maxLength={10} style={{ color: '#B3B1B1', width: '70%', fontSize: 20, letterSpacing: 3, marginLeft: 20, color: '#000000', fontWeight: 'bold' }} keyboardType='Number-type' placeholder='Amount' placeholderTextColor='#B3B1B1' />
+                <TextInput maxLength={10} style={{ color: '#B3B1B1', width: '70%', fontSize: 20, letterSpacing: 2, marginLeft: 20, color: '#000000', fontWeight: 'bold' }} keyboardType='Number-type' placeholder='Amount' placeholderTextColor='#B3B1B1' />
                 <TouchableOpacity>
                     <Image resizeMode='contain' style={{ width: 40, height: 40, backgroundColor: 'red', margin: 10, borderRadius: 20, left: 20 }} source={require('../image/amout.png')} />
                 </TouchableOpacity>

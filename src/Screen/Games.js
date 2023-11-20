@@ -71,7 +71,7 @@ const renderItem = ({ item }) => (
                 <Image resizeMode='contain' style={{ width: 45, height: 45, backgroundColor: 'red', margin: 10, borderRadius: 20 }} source={item.image1} />
             </View>
         </View>
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 10, backgroundColor: 'red'  }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 10, backgroundColor: 'red' }}>
             <Text style={{ color: '#FFFFFF', fontSize: 20 }}>
                 {item.entry}
             </Text>
@@ -82,21 +82,21 @@ const renderItem = ({ item }) => (
     </View>
 );
 
-const Games = ({navigation}) => {
+const Games = ({ navigation }) => {
     return (
         <View style={{ backgroundColor: '#2b090a', flex: 1, }}>
-            <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Image resizeMode='cover' style={{ width: 25, height: 25, margin: 5 }} source={require('../image/backarrow.png')} />
-                </TouchableOpacity>
+            <TouchableOpacity style={{ left: 10, margin: 5 }} onPress={() => navigation.goBack()}>
+                <Image resizeMode='cover' style={{ width: 25, height: 25, }} source={require('../image/backarrow.png')} />
+            </TouchableOpacity>
             <View>
-                <Text style={{ color: '#FFFFFF', fontSize: 20, marginLeft: 30, top: 20 }}>Create a Battle!</Text>
+                <Text style={{ color: '#FFFFFF', fontSize: 20, marginLeft: 20, top: 10 }}>Create a Battle!</Text>
             </View>
-            <View style={{ margin: 30, borderRadius: 10, backgroundColor: '#FFFFFF', width: '85%', flexDirection: 'row', height: 60 }} >
+            <View style={{ margin: 20, borderRadius: 10, backgroundColor: '#FFFFFF', width: '85%', flexDirection: 'row', height: 60 }} >
 
-                <TextInput maxLength={10} style={{ color: '#B3B1B1', width: '70%', fontSize: 20, letterSpacing: 3, marginLeft: 20 }} keyboardType='Number-type' placeholder='Amount' placeholderTextColor='#B3B1B1' />
+                <TextInput maxLength={10} style={{ color: '#B3B1B1', width: '70%', fontSize: 20, letterSpacing: 2, marginLeft: 20 }} keyboardType='Number-type' placeholder='Amount' placeholderTextColor='#B3B1B1' />
                 <TouchableOpacity>
 
-                <Image resizeMode='contain' style={{ width: 40, height: 40, backgroundColor: 'red', margin: 10, borderRadius: 20, left: 20 }} source={require('../image/amout.png')} />
+                    <Image resizeMode='contain' style={{ width: 40, height: 40, backgroundColor: 'red', margin: 10, borderRadius: 20, left: 20 }} source={require('../image/amout.png')} />
                 </TouchableOpacity>
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center', marginLeft: 15 }}>
@@ -105,7 +105,7 @@ const Games = ({navigation}) => {
                     Open Battles
                 </Text>
             </View>
-            <FlatList contentContainerStyle={{paddingBottom:20}}
+            <FlatList contentContainerStyle={{ paddingBottom: 20 }}
                 data={data}
                 renderItem={renderItem}
             />

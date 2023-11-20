@@ -19,6 +19,16 @@ import PayPament from '../Screen/PayPament';
 import Creditcard1 from '../Screen/Creditcard1';
 import CardAdd from '../Screen/CardAdd';
 import ProfileUpdate from '../Screen/ProfileUpdate';
+import TermsAndCondition from '../Screen/TermsAndCondition';
+import Legality from '../Screen/Legality';
+import PrivacyPolicy from '../Screen/PrivacyPolicy';
+import Cancellationpolicy from '../Screen/Cancellationpolicy';
+import Contactus from '../Screen/Contactus';
+import Aboutus from '../Screen/Aboutus';
+import UpdateAadahar from '../Screen/UpdateAadahar';
+import InviteFriends from '../Screen/InviteFriends';
+import Myreferrals from '../Screen/Myreferrals';
+import Withdraw from '../Screen/Withdraw';
 
 
 const Stack = createNativeStackNavigator();
@@ -45,6 +55,16 @@ const StackNavigation = () => {
         <Stack.Screen name="Creditcard1" component={Creditcard1} />
         <Stack.Screen name="CardAdd" component={CardAdd} />
         <Stack.Screen name="ProfileUpdate" component={ProfileUpdate} />
+        <Stack.Screen name="TermsAndCondition" component={TermsAndCondition} />
+        <Stack.Screen name="Legality" component={Legality} />
+        <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
+        <Stack.Screen name="Cancellationpolicy" component={Cancellationpolicy} />
+        <Stack.Screen name="Contactus" component={Contactus} />
+        <Stack.Screen name="Aboutus" component={Aboutus} />
+        <Stack.Screen name="UpdateAadahar" component={UpdateAadahar} />
+        <Stack.Screen name="InviteFriends" component={InviteFriends} />
+        <Stack.Screen name="Myreferrals" component={Myreferrals} />
+        <Stack.Screen name="Withdraw" component={Withdraw} />
         {/* <Stack.Screen name="CreditCard" component={CreditCard} /> */}
 
       </Stack.Navigator>

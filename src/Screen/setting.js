@@ -1,8 +1,27 @@
-import React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, TouchableOpacity, Modal,TextInput} from 'react-native';
 import HeaderBar from '../component/HeaderBar';
 
 const setting = ({ navigation }) => {
+  const [isModalVisible0, setModalVisible0] = useState(false);
+  const [isModalVisible, setModalVisible] = useState(false);
+
+  const openModa0 = () => {
+    setModalVisible0(true);
+  };
+
+  const closeModa0 = () => {
+    setModalVisible0(false);
+  };
+  const openModa = () => {
+    setModalVisible(true);
+  };
+
+  const closeModa = () => {
+    setModalVisible(false);
+  };
+
+  //Modal//
   return (
     <View style={{ backgroundColor: '#2b090a', flex: 1, }}>
       <HeaderBar navigation={navigation} />
@@ -33,37 +52,91 @@ const setting = ({ navigation }) => {
       <Image resizeMode='contain' style={{ width: 30, height: 30, marginLeft: 10 }} source={require('../image/music.png')} />
       </View>
       </View> */}
-      <View style={{padding:5}}>
+      <View style={{ padding: 5 }}>
 
-      <TouchableOpacity style={{flexDirection:'row',justifyContent:'space-between',margin:10}}>
-      <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold', }}>Terms and Conditions</Text>
-          <Image resizeMode='contain' style={{ width: 25, height: 25 }} source={require('../image/rightarrow.png')} />
-      </TouchableOpacity>
-      <TouchableOpacity style={{flexDirection:'row',justifyContent:'space-between',margin:10}}>
-      <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold', }}>Legality</Text>
-          <Image resizeMode='contain' style={{ width: 25, height: 25 }} source={require('../image/rightarrow.png')} />
-      </TouchableOpacity>
-      <TouchableOpacity style={{flexDirection:'row',justifyContent:'space-between',margin:10}}>
-      <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold', }}>Privacy Policy</Text>
-          <Image resizeMode='contain' style={{ width: 25, height: 25 }} source={require('../image/rightarrow.png')} />
-      </TouchableOpacity>
-      <TouchableOpacity style={{flexDirection:'row',justifyContent:'space-between',margin:10}}>
-      <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold', }}>Cancellation Policy</Text>
-          <Image resizeMode='contain' style={{ width: 25, height: 25 }} source={require('../image/rightarrow.png')} />
-      </TouchableOpacity>
-      <TouchableOpacity style={{flexDirection:'row',justifyContent:'space-between',margin:10}}>
-      <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold', }}>Contact Us</Text>
-          <Image resizeMode='contain' style={{ width: 25, height: 25 }} source={require('../image/rightarrow.png')} />
-      </TouchableOpacity>
-      <TouchableOpacity style={{flexDirection:'row',justifyContent:'space-between',margin:10}}>
-      <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold', }}>Notification</Text>
-          <Image resizeMode='contain' style={{ width: 25, height: 25 }} source={require('../image/rightarrow.png')} />
-      </TouchableOpacity>
-      <TouchableOpacity style={{flexDirection:'row',justifyContent:'space-between',margin:10}}>
-      <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold', }}>About Us</Text>
-          <Image resizeMode='contain' style={{ width: 25, height: 25 }} source={require('../image/rightarrow.png')} />
-      </TouchableOpacity>
-      
+        <TouchableOpacity onPress={() => navigation.navigate('TermsAndCondition')} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold', opacity: 0.8 }}>Terms and Conditions</Text>
+          <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Legality')} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold', opacity: 0.8 }}>Legality</Text>
+          <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('PrivacyPolicy')} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold', opacity: 0.8 }}>Privacy Policy</Text>
+          <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Cancellationpolicy')} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold', opacity: 0.8 }}>Cancellation Policy</Text>
+          <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Contactus')} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold', opacity: 0.8 }}>Contact Us</Text>
+          <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Notification')} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold', opacity: 0.8 }}>Notification</Text>
+          <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Aboutus')} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold', opacity: 0.8 }}>About Us</Text>
+          <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
+        </TouchableOpacity>
+        <TouchableOpacity onPress={openModa0} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold', opacity: 0.8 }}>Logout</Text>
+          <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
+        </TouchableOpacity>
+        <Modal
+          visible={isModalVisible0}
+          // animationType="slide"
+          transparent={true}
+        >
+          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+            <View style={{ backgroundColor: '#FFFFFF', padding: 10, borderRadius: 10, width: 300 }}>
+              <Text style={{ alignSelf: 'center', padding: 5, color: '#000000', fontWeight: 'bold', fontSize: 16 }}>are you sure want to logout ?</Text>
+              <View style={{flexDirection:'row',justifyContent:'space-around'}}>
+
+              <TouchableOpacity style={{ backgroundColor: '#2b090a', alignItems: 'center', borderRadius: 10, width: 100, alignSelf: 'center', height: 30, justifyContent: 'center' }} onPress={closeModa0} >
+                <Text style={{ color: '#FFFFFF', fontSize: 16 }}>NO</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={{ backgroundColor: '#2b090a', alignItems: 'center', borderRadius: 10, width: 100, alignSelf: 'center', height: 30, justifyContent: 'center' }} onPress={closeModa0} >
+                <Text style={{ color: '#FFFFFF', fontSize: 16 }}>YES</Text>
+              </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </Modal>
+        <TouchableOpacity onPress={openModa} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
+          <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold', opacity: 0.8 }}>Delete Account</Text>
+          <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
+        </TouchableOpacity>
+        <Modal
+          visible={isModalVisible}
+          // animationType="slide"
+          transparent={true}
+        >
+          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+            <View style={{ backgroundColor: '#FFFFFF', padding: 10, borderRadius: 10, width: 300 }}>
+              <View style={{width:210,alignSelf:'center'}}>
+
+              <Text style={{ alignSelf: 'center', color: '#000000', fontWeight: 'bold', fontSize: 16 }}>are you sure want to delete</Text>
+              <Text style={{ alignSelf: 'center',color: '#000000', fontWeight: 'bold', fontSize: 16 }}> your account ?</Text>
+              </View>
+              <View style={{margin:10,borderWidth:1,borderRadius:10}}>
+                <TextInput style={{height:40,left:5,width:'70%'}} placeholder='Enter your name'placeholderTextColor={'#000000'}/>
+              </View>
+              <View style={{flexDirection:'row',justifyContent:'space-around'}}>
+
+              <TouchableOpacity style={{ backgroundColor: '#2b090a', alignItems: 'center', borderRadius: 10, width: 100, alignSelf: 'center', height: 30, justifyContent: 'center' }} onPress={closeModa} >
+                <Text style={{ color: '#FFFFFF', fontSize: 14 }}>NO</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={{ backgroundColor: '#2b090a', alignItems: 'center', borderRadius: 10, width: 100, alignSelf: 'center', height: 30, justifyContent: 'center' }} onPress={closeModa} >
+                <Text style={{ color: '#FFFFFF', fontSize: 14 }}>Continus</Text>
+              </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+        </Modal>
       </View>
     </View>
   );
