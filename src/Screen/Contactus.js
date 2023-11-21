@@ -8,7 +8,7 @@ const Contactus = ({ navigation }) => {
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                     <Image resizeMode='cover' style={{ width: 25, height: 25 }} source={require('../image/backarrow.png')} />
                 </TouchableOpacity>
-                <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold' }}>Contact Us</Text>
+                <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold' }}>Help</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
                     <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={require('../image/notifectionmn.png')} />
                 </TouchableOpacity>

@@ -20,7 +20,7 @@ const AddPayment = ({ navigation }) => {
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                     <Image resizeMode='cover' style={{ width: 25, height: 25, }} source={require('../image/backarrow.png')} />
                 </TouchableOpacity>
-                <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold' }}>Add Payment</Text>
+                <Text style={{ color: '#FFFFFF', fontSize: 20,fontFamily:'JosefinSans-Bold',bottom:2.5 }}>Add Payment</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
 
                     <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={require('../image/notifectionmn.png')} />
@@ -129,7 +129,7 @@ const AddPayment = ({ navigation }) => {
             <View style={{ margin: 10, borderRadius: 10, width: '80%', flexDirection: 'row', height: 50, alignSelf: 'center', borderWidth: 1, borderColor: "red" }}>
                 <TextInput
                     style={{
-                        fontWeight: 'bold',
+                        fontFamily:'JosefinSans-Bold',bottom:2.5,
                         color: '#000000',
                         fontSize: 20,
                         letterSpacing: 2,
@@ -150,7 +150,7 @@ const AddPayment = ({ navigation }) => {
                 />
             </View>
             <TouchableOpacity onPress={() => navigation.navigate('PayPament')} style={{ backgroundColor: 'red', width: '80%', alignSelf: 'center', height: 50, justifyContent: 'center', borderRadius: 20, top: 70 }}>
-                <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold', textAlign: 'center' }}>
+                <Text style={{ color: '#FFFFFF', fontSize: 20,fontFamily:'JosefinSans-Bold', textAlign: 'center',bottom:2.5 }}>
                     Add
                 </Text>
             </TouchableOpacity>

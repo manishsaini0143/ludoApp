@@ -9,6 +9,12 @@ const CardAdd = ({ navigation }) => {
                     <Image resizeMode='cover' style={{ width: 30, height: 30, }} source={require('../image/backarrow.png')} />
                 </TouchableOpacity>
             </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Applycopans')} style={{flexDirection:'row',justifyContent:'flex-end',width:'90%'}}>
+                <Text  style={{color:'#FFFFFF',fontSize:16,margin:5}}>
+                    Apply Coupons 
+                </Text>
+                <Image resizeMode='cover' style={{ width: 20, height: 20,alignSelf:'center',margin:5 }} source={require('../image/monrycopun.png')} />
+            </TouchableOpacity>
             <View style={{ width: '95%', alignSelf: 'center' }}>
 
                 <TouchableOpacity style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 10, borderRadius: 15, borderWidth: 0.7, borderColor: 'red', margin: 10 }}>

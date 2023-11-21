@@ -18,7 +18,7 @@ const MyProfile = ({ navigation }) => {
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                     <Image resizeMode='cover' style={{ width: 25, height: 25, margin: 5 }} source={require('../image/backarrow.png')} />
                 </TouchableOpacity>
-                <Text style={{ color: '#FFFFFF', fontSize: 22, fontWeight: 'bold' }}>My Profile</Text>
+                <Text style={{ color: '#FFFFFF', fontSize: 22, fontFamily:'JosefinSans-Bold', }}>My Profile</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
                     <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={require('../image/notifectionmn.png')} />
                 </TouchableOpacity>
@@ -31,9 +31,9 @@ const MyProfile = ({ navigation }) => {
                     </TouchableOpacity>
                 </View>
                 <View style={{ marginLeft: 20 }}>
-                    <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold' }}>Deepak Pradhan</Text>
-                    <Text style={{ color: '#FFFFFF', fontSize: 16, fontWeight: 'bold' }}>Username: Deepak Pradhan</Text>
-                    <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 'bold' }}>DeepakPradhan123@gmail.com</Text>
+                    <Text style={{ color: '#FFFFFF', fontSize: 18,  fontFamily:'JosefinSans-Bold', }}>Deepak Pradhan</Text>
+                    <Text style={{ color: '#FFFFFF', fontSize: 16,fontFamily:'JosefinSans-Bold' }}>Username: Deepak Pradhan</Text>
+                    <Text style={{ color: '#FFFFFF', fontSize: 14, fontFamily:'JosefinSans-Bold' }}>DeepakPradhan123@gmail.com</Text>
                     <ProgressBarAndroid
                         styleAttr="Horizontal"
                         indeterminate={false}
@@ -46,44 +46,44 @@ const MyProfile = ({ navigation }) => {
             <View style={{ backgroundColor: '#36090c', borderRadius: 10, width: '95%', alignSelf: 'center', padding: 10, margin: 10 }}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '93%', alignSelf: 'center', margin: 10 }}>
                     <View>
-                        <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold' }}>Mobile Number</Text>
-                        <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 'bold' }}>+917456348345</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 17,fontFamily:'JosefinSans-Bold' }}>Mobile Number</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 13,fontFamily:'Poppins-Bold'}}>+917456348345</Text>
                     </View>
                     <View style={{ backgroundColor: '#007805', width: 90, textAlign: 'center', borderRadius: 10, alignSelf: 'center' }}>
 
-                        <Text style={{ color: '#FFFFFF', textAlign: 'center', fontWeight: 'bold', fontSize: 14 }}>
+                        <Text style={{ color: '#FFFFFF', textAlign: 'center',fontFamily:'Poppins-Bold',top:2, fontSize: 14 }}>
                             Verified
                         </Text>
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '93%', alignSelf: 'center', margin: 10 }}>
                     <View>
-                        <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold' }}>Email Address</Text>
-                        <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 'bold' }}>DeepakPradhan123@gamil.com</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 17,fontFamily:'JosefinSans-Bold' }}>Email Address</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 13,fontFamily:'Poppins-Bold' }}>DeepakPradhan123@gamil.com</Text>
                     </View>
                     <View style={{ backgroundColor: '#007805', width: 90, textAlign: 'center', borderRadius: 10, alignSelf: 'center' }}>
 
-                        <Text style={{ color: '#FFFFFF', textAlign: 'center', fontWeight: 'bold', fontSize: 14 }}>
+                        <Text style={{ color: '#FFFFFF', textAlign: 'center',fontFamily:'Poppins-Bold',top:2, fontSize: 14 }}>
                             Verified
                         </Text>
                     </View>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '93%', alignSelf: 'center', margin: 10 }}>
                     <View>
-                        <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold' }}>Aadhar</Text>
-                        <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 'bold' }}>******************</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 17,fontFamily:'JosefinSans-Bold' }}>Aadhar</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 13,fontFamily:'Poppins-Bold'}}>******************</Text>
                     </View>
                     <TouchableOpacity style={{ backgroundColor: 'red', width: 90, textAlign: 'center', borderRadius: 10, alignSelf: 'center' }} onPress={() => navigation.navigate('UpdateAadahar')}>
 
-                        <Text style={{ color: '#FFFFFF', fontSize: 15, textAlign: 'center', borderRadius: 10, fontWeight: 'bold', alignSelf: 'center' }}>
+                        <Text style={{ color: '#FFFFFF', fontSize: 14, textAlign: 'center', borderRadius: 10,fontFamily:'Poppins-Bold', alignSelf: 'center' }}>
                             Update Aadhar
                         </Text>
                     </TouchableOpacity>
                 </View>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '93%', alignSelf: 'center', margin: 10 }}>
                     <View>
-                        <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold' }}>Invitation Code</Text>
-                        <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 'bold' }}>Inwnwsry</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 17,fontFamily:'JosefinSans-Bold' }}>Invitation Code</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 13,fontFamily:'Poppins-Bold'}}>Inwnwsry</Text>
                     </View>
                     <TouchableOpacity style={{ alignSelf: 'center' }} onPress={openShareDialog}>
                         <Image resizeMode='cover' style={{ width: 30, height: 30, right: 35 }} source={require('../image/share.png')} />

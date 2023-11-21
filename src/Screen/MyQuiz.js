@@ -31,7 +31,7 @@ const MyQuiz = ({ navigation }) => {
         },
         {
             key: '1',
-            image1: require('../image/ludo3.jpg'),
+            image1: require('../image/luDo5.png'),
             image2: require('../image/cricket.jpg'),
             image3: require('../image/game1.jpg'),
             image4: require('../image/king.png'),
@@ -55,7 +55,6 @@ const MyQuiz = ({ navigation }) => {
             pize: 'Prize :180.0 Coins',
             enter: 'Enter : 6.0 Conis'
         },
-
     ];
     const renderItem1 = ({ item }) => (
         <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
@@ -118,5 +117,4 @@ const MyQuiz = ({ navigation }) => {
         </View>
     );
 }
-
 export default MyQuiz;

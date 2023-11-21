@@ -54,10 +54,10 @@ export default function Drawer({ navigation }) {
 
                     <Image resizeMode='contain' style={{ width: 18, height: 18, zIndex: 1, position: 'absolute', bottom: 5, right: 110 }} source={require('../image/pen.png')} />
                   </TouchableOpacity>
-                  <Text style={{ color: '#FFFFFF', fontSize: 16, textAlign: 'center', fontWeight: 'bold' }}>
+                  <Text style={{ color: '#FFFFFF', fontSize: 16, textAlign: 'center',fontFamily:'JosefinSans-Bold' }}>
                     Deepak Pradhan
                   </Text>
-                  <Text style={{ color: '#FFFFFF', fontSize: 12, textAlign: 'center', fontWeight: 'bold' }}>
+                  <Text style={{ color: '#FFFFFF', fontSize: 12, textAlign: 'center',fontFamily:'Poppins-Bold'}}>
                     DeepakPradhan123@gamil.com
                   </Text>
                 </TouchableOpacity>

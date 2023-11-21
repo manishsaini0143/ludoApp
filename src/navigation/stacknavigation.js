@@ -29,6 +29,7 @@ import UpdateAadahar from '../Screen/UpdateAadahar';
 import InviteFriends from '../Screen/InviteFriends';
 import Myreferrals from '../Screen/Myreferrals';
 import Withdraw from '../Screen/Withdraw';
+import Applycopans from '../Screen/Applycopans';
 
 
 const Stack = createNativeStackNavigator();
@@ -65,6 +66,7 @@ const StackNavigation = () => {
         <Stack.Screen name="InviteFriends" component={InviteFriends} />
         <Stack.Screen name="Myreferrals" component={Myreferrals} />
         <Stack.Screen name="Withdraw" component={Withdraw} />
+        <Stack.Screen name="Applycopans" component={Applycopans} />
         {/* <Stack.Screen name="CreditCard" component={CreditCard} /> */}
 
       </Stack.Navigator>

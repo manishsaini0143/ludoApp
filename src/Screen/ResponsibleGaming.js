@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, Image, TouchableOpacity, Linking } from 'react-native';
 
 const ResponsibleGaming = ({ navigation }) => {
     const [showGame1Details, setShowGame1Details] = useState(false);
@@ -11,7 +11,7 @@ const ResponsibleGaming = ({ navigation }) => {
                 <TouchableOpacity onPress={() => navigation.goBack()}>
                     <Image resizeMode='cover' style={{ width: 25, height: 25, }} source={require('../image/backarrow.png')} />
                 </TouchableOpacity>
-                <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold' }}>Responsible Gaming</Text>
+                <Text style={{ color: '#FFFFFF', fontSize: 20, fontFamily: 'JosefinSans-Bold', bottom: 5 }}>Responsible Gaming</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
 
                     <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={require('../image/notifectionmn.png')} />
@@ -121,23 +121,18 @@ const ResponsibleGaming = ({ navigation }) => {
                     <Image resizeMode='cover' style={{ width: 150, height: 150, alignSelf: 'center' }} source={require('../image/Login.png')} />
                 </View>
                 <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
-                    <TouchableOpacity>
-
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.youtube.com/')}>
                         <Image resizeMode='cover' style={{ width: 50, height: 50, margin: 5 }} source={require('../image/youtube1.png')} />
                     </TouchableOpacity>
-                    <TouchableOpacity>
-
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.instagram.com/')}>
                         <Image resizeMode='cover' style={{ width: 50, height: 50, margin: 5 }} source={require('../image/instagram.png')} />
                     </TouchableOpacity>
-                    <TouchableOpacity>
-
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.facebook.com/')}>
                         <Image resizeMode='cover' style={{ width: 50, height: 50, margin: 5 }} source={require('../image/facebook.png')} />
                     </TouchableOpacity>
-                    <TouchableOpacity>
-
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.linkedin.com/')}>
                         <Image resizeMode='cover' style={{ width: 50, height: 50, margin: 5 }} source={require('../image/linkedin.png')} />
                     </TouchableOpacity>
-
                 </View>
                 <View
                     style={{
@@ -159,7 +154,7 @@ const ResponsibleGaming = ({ navigation }) => {
 
                         <Image
                             resizeMode='cover'
-                            style={{ width: 20, height: 20 ,top:5 }}
+                            style={{ width: 20, height: 20, top: 5 }}
                             source={require('../image/downarro1.png')}
                         />
                     </TouchableOpacity>
@@ -196,7 +191,7 @@ const ResponsibleGaming = ({ navigation }) => {
 
                         <Image
                             resizeMode='cover'
-                            style={{ width: 20, height: 20,top:5 }}
+                            style={{ width: 20, height: 20, top: 5 }}
                             source={require('../image/downarro1.png')}
                         />
                     </TouchableOpacity>
@@ -231,7 +226,7 @@ const ResponsibleGaming = ({ navigation }) => {
 
                         <Image
                             resizeMode='cover'
-                            style={{ width: 20, height: 20,top:5 }}
+                            style={{ width: 20, height: 20, top: 5 }}
                             source={require('../image/downarro1.png')}
                         />
                     </TouchableOpacity>
