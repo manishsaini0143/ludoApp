@@ -16,6 +16,7 @@ import Tutorial from '../Screen/Tutorial';
 import MyQuiz from '../Screen/MyQuiz';
 import Instagrma from '../Screen/Instagrma';
 import Telegram from '../Screen/Telegram';
+import Winners from '../Screen/Winners';
 
 const Drawers = createDrawerNavigator();
 const CustomDrawerItem = ({ label, imageSource, onPress, backgroundColor }) => (
@@ -54,10 +55,10 @@ export default function Drawer({ navigation }) {
 
                     <Image resizeMode='contain' style={{ width: 18, height: 18, zIndex: 1, position: 'absolute', bottom: 5, right: 110 }} source={require('../image/pen.png')} />
                   </TouchableOpacity>
-                  <Text style={{ color: '#FFFFFF', fontSize: 16, textAlign: 'center',fontFamily:'JosefinSans-Bold' }}>
+                  <Text style={{ color: '#FFFFFF', fontSize: 16, textAlign: 'center', fontFamily: 'JosefinSans-Bold' }}>
                     Deepak Pradhan
                   </Text>
-                  <Text style={{ color: '#FFFFFF', fontSize: 12, textAlign: 'center',fontFamily:'Poppins-Bold'}}>
+                  <Text style={{ color: '#FFFFFF', fontSize: 12, textAlign: 'center', fontFamily: 'Poppins-Bold' }}>
                     DeepakPradhan123@gamil.com
                   </Text>
                 </TouchableOpacity>
@@ -122,6 +123,14 @@ export default function Drawer({ navigation }) {
                   setSelectedItem('Referrals');
                 }}
                 backgroundColor={selectedItem === 'Referrals' ? 'red' : 'red'} />
+              <CustomDrawerItem
+                label="Winners"
+                imageSource={require('../image/Winner.png')}
+                onPress={() => {
+                  props.navigation.navigate('Winners');
+                  setSelectedItem('Winners');
+                }}
+                backgroundColor={selectedItem === 'Winners' ? 'red' : 'red'} />
               <CustomDrawerItem
                 label="Notification"
                 imageSource={require('../image/Notification3.png')}
@@ -219,6 +228,7 @@ export default function Drawer({ navigation }) {
       <Drawers.Screen name="MyQuiz" component={MyQuiz} />
       <Drawers.Screen name="Instagrma" component={Instagrma} />
       <Drawers.Screen name="Telegram" component={Telegram} />
+      <Drawers.Screen name="Winners" component={Winners} />
     </Drawers.Navigator>
   );
 }

@@ -151,7 +151,6 @@ const ResponsibleGaming = ({ navigation }) => {
                     <TouchableOpacity onPress={() => {
                         setShowGame1Details(!showGame1Details);
                     }}>
-
                         <Image
                             resizeMode='cover'
                             style={{ width: 20, height: 20, top: 5 }}
@@ -166,8 +165,6 @@ const ResponsibleGaming = ({ navigation }) => {
                         <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Battleground India</Text>
                         <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Freefire Max</Text>
                         <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Callback</Text>
-
-
                     </View>
                 )}
 
@@ -188,7 +185,6 @@ const ResponsibleGaming = ({ navigation }) => {
                     <TouchableOpacity onPress={() => {
                         setShowGame2Details(!showGame2Details);
                     }}>
-
                         <Image
                             resizeMode='cover'
                             style={{ width: 20, height: 20, top: 5 }}
@@ -205,7 +201,6 @@ const ResponsibleGaming = ({ navigation }) => {
 
                     </View>
                 )}
-
                 <View
                     style={{
                         borderRadius: 10,
@@ -223,7 +218,6 @@ const ResponsibleGaming = ({ navigation }) => {
                     <TouchableOpacity onPress={() => {
                         setShowGame3Details(!showGame3Details);
                     }}>
-
                         <Image
                             resizeMode='cover'
                             style={{ width: 20, height: 20, top: 5 }}
@@ -237,10 +231,8 @@ const ResponsibleGaming = ({ navigation }) => {
                         <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Legality</Text>
                         <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Terms And Conditions</Text>
                         <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Anti Money Laundering Policies</Text>
-
                     </View>
                 )}
-
             </ScrollView>
         </View>
     );

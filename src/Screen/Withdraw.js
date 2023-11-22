@@ -189,12 +189,12 @@ const Withdraw = ({ navigation }) => {
                                 </Modal>
                             </View> : null
                 }
-                <View style={{ width: '100%', height: 2, backgroundColor: 'red' ,marginTop:15}}></View>
-                <View style={{margin:10}}>
-                    <Text style={{ color: '#FFFFFF', fontSize: 18,opacity:0.7 }}>Already linked accounts</Text>
+                <View style={{ width: '100%', height: 2, backgroundColor: 'red', marginTop: 15 }}></View>
+                <View style={{ margin: 10 }}>
+                    <Text style={{ color: '#FFFFFF', fontSize: 18, opacity: 0.7 }}>Already linked accounts</Text>
                 </View>
-                <View style={{alignSelf:'center',marginTop:15}}>
-                    <Text style={{ color: '#FFFFFF', fontSize: 18}}>No Account Linked</Text>
+                <View style={{ alignSelf: 'center', marginTop: 15 }}>
+                    <Text style={{ color: '#FFFFFF', fontSize: 18 }}>No Account Linked</Text>
                 </View>
             </ScrollView>
         </View>
