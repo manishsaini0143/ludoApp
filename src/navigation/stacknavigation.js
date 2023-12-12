@@ -23,13 +23,20 @@ import TermsAndCondition from '../Screen/TermsAndCondition';
 import Legality from '../Screen/Legality';
 import PrivacyPolicy from '../Screen/PrivacyPolicy';
 import Cancellationpolicy from '../Screen/Cancellationpolicy';
-import Contactus from '../Screen/Contactus';
+// import Contactus from '../Screen/Contactus';
 import Aboutus from '../Screen/Aboutus';
 import UpdateAadahar from '../Screen/UpdateAadahar';
 import InviteFriends from '../Screen/InviteFriends';
 import Myreferrals from '../Screen/Myreferrals';
 import Withdraw from '../Screen/Withdraw';
 import Applycopans from '../Screen/Applycopans';
+import Paytmwallets from '../Screen/Paytmwallets';
+import UPIpayments from '../Screen/UPIpayments';
+import NwtBanking from '../Screen/NwtBanking';
+import Super from '../Screen/Super';
+import Cricketgame from '../Screen/Cricketgame';
+import Fanbattle from '../Screen/Fanbattle';
+import Clashx from '../Screen/Clashx';
 
 
 const Stack = createNativeStackNavigator();
@@ -42,7 +49,6 @@ const StackNavigation = () => {
 
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Singin" component={Singin} />
-
         <Stack.Screen name="Loginotp" component={Loginotp} />
         <Stack.Screen name="wallet" component={wallet} />
         <Stack.Screen name="Drawer" component={Drawer} />
@@ -60,13 +66,20 @@ const StackNavigation = () => {
         <Stack.Screen name="Legality" component={Legality} />
         <Stack.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
         <Stack.Screen name="Cancellationpolicy" component={Cancellationpolicy} />
-        <Stack.Screen name="Contactus" component={Contactus} />
+        {/* <Stack.Screen name="Contactus" component={Contactus} /> */}
         <Stack.Screen name="Aboutus" component={Aboutus} />
         <Stack.Screen name="UpdateAadahar" component={UpdateAadahar} />
         <Stack.Screen name="InviteFriends" component={InviteFriends} />
         <Stack.Screen name="Myreferrals" component={Myreferrals} />
         <Stack.Screen name="Withdraw" component={Withdraw} />
         <Stack.Screen name="Applycopans" component={Applycopans} />
+        <Stack.Screen name="Paytmwallets" component={Paytmwallets} />
+        <Stack.Screen name="UPIpayments" component={UPIpayments} />
+        <Stack.Screen name="NwtBanking" component={NwtBanking} />
+        <Stack.Screen name="Super" component={Super} />
+        <Stack.Screen name="Cricketgame" component={Cricketgame} />
+        <Stack.Screen name="Fanbattle" component={Fanbattle} />
+        <Stack.Screen name="Clashx" component={Clashx} />
         {/* <Stack.Screen name="CreditCard" component={CreditCard} /> */}
 
       </Stack.Navigator>

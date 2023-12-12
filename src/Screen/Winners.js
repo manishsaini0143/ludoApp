@@ -1,14 +1,65 @@
 import React, { useState } from 'react';
-import { View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
+import { View, Text, Image, TouchableOpacity, FlatList, ScrollView, Modal, TextInput } from 'react-native';
 
 const Winners = ({ navigation }) => {
-    const [selectedGame, setSelectedGame] = useState('FREE FIRE');
+    const [isModalVisible, setModalVisible] = useState(false);
 
-    const handleGameClick = (game) => {
-        setSelectedGame(game);
+
+    const openModa = () => {
+        setModalVisible(true);
     };
 
-    // Separate arrays for each game category
+    const closeModa = () => {
+        setModalVisible(false);
+    };
+    const [selectedGame, setSelectedGame] = useState('FREE FIRE');
+    const freede = [
+        {
+            key: '1',
+            image01: require('../image/king.png'),
+            image02: require('../image/king2.png'),
+            image03: require('../image/king3.png'),
+            image1: require('../image/Avatar1.png'),
+            id1: '1.Sunil Pardhan',
+            id2: '2.Deepak Pardhan',
+            id3: '3.Dinesh Pardhan',
+            priz1: 'Won:₹ 8999.00',
+            priz2: 'Won:₹ 6999.00',
+            priz3: 'Won:₹ 4999.00',
+        },
+
+    ];
+    const Ludo = [
+        {
+            key: '1',
+            image01: require('../image/king.png'),
+            image02: require('../image/king2.png'),
+            image03: require('../image/king3.png'),
+            image1: require('../image/Avatar1.png'),
+            id1: '1.Aman Pardhan',
+            id2: '2.Vikash Pardhan',
+            id3: '3.Aashish Pardhan',
+            priz1: 'Won:₹ 8999.00',
+            priz2: 'Won:₹ 6999.00',
+            priz3: 'Won:₹ 4999.00',
+        },
+    ];
+    const fanbelletler = [
+        {
+            key: '1',
+            image01: require('../image/king.png'),
+            image02: require('../image/king2.png'),
+            image03: require('../image/king3.png'),
+            image1: require('../image/Avatar1.png'),
+            id1: '1.Nitesh Bagda',
+            id2: '2.Rahul Bagda',
+            id3: '3.Sonu Sharma',
+            priz1: 'Won:₹ 8999.00',
+            priz2: 'Won:₹ 6999.00',
+            priz3: 'Won:₹ 4999.00',
+        },
+    ];
+
     const freeFireData = [
         {
             key: '1',
@@ -194,26 +245,44 @@ const Winners = ({ navigation }) => {
             rank: '#9'
         },
     ];
+    // const pubg = [
+    //     {
+    //         key: '1',
+    //         image1: require('../image/Avatar1.png'),
+    //         id1: 'Anil Saini',
+    //         prize: 'Won:₹ 1199.00',
+    //         rank: '#9'
+    //     },
+    // ];
+    const renderItem3 = ({ item }) => (
+        <View style={{ backgroundColor: '#B91515E8', padding: 10, borderBottomRightRadius: 40, borderBottomLeftRadius: 40, }}>
+            <View style={{ width: '90%', alignSelf: 'center' }}>
+                <View>
+                    <View style={{ alignSelf: 'center', alignItems: 'center' }}>
+                        <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={item.image01} />
+                        <Image resizeMode='cover' style={{ width: 70, height: 70 }} source={item.image1} />
+                        <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 'bold' }}>{item.id1}</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 12, fontWeight: 'bold' }}>{item.priz1}</Text>
+                    </View>
+                </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', }}>
 
-    const moreData = [
-        // More winners data
-        // ...
-    ];
-
-    const renderFlatListData = () => {
-        switch (selectedGame) {
-            case 'FREE FIRE':
-                return freeFireData;
-            case 'LUDO':
-                return ludoData;
-            case 'FAN BATLE':
-                return fanBattleData;
-            case 'More':
-                return moreData;
-            default:
-                return [];
-        }
-    };
+                    <View style={{ alignSelf: 'center', alignItems: 'center' }}>
+                        <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={item.image02} />
+                        <Image resizeMode='cover' style={{ width: 70, height: 70 }} source={item.image1} />
+                        <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 'bold' }}>{item.id2}</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 12, fontWeight: 'bold' }}>{item.priz2}</Text>
+                    </View>
+                    <View style={{ alignSelf: 'center', alignItems: 'center' }}>
+                        <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={item.image03} />
+                        <Image resizeMode='cover' style={{ width: 70, height: 70 }} source={item.image1} />
+                        <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 'bold' }}>{item.id3}</Text>
+                        <Text style={{ color: '#FFFFFF', fontSize: 12, fontWeight: 'bold' }}>{item.priz3}</Text>
+                    </View>
+                </View>
+            </View>
+        </View>
+    )
 
     const renderItem = ({ item }) => (
         <View>
@@ -225,7 +294,7 @@ const Winners = ({ navigation }) => {
                     <View style={{ left: 20 }}>
                         <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold' }}>{item.id1}</Text>
                         <Text style={{ color: 'green', fontSize: 16, fontWeight: 'bold' }}>{item.prize}</Text>
-                        {/* <Text style={{ color: 'red', fontSize: 16, fontWeight: 'bold' }}>{item.calej}</Text> */}
+                        {/* <Text style={{ color: 'red', fontSize: 16, fontWeight: 'bold' ,marginTop:-10}}>{item.calej}</Text> */}
                     </View>
                 </View>
                 <View>
@@ -235,7 +304,6 @@ const Winners = ({ navigation }) => {
             <View style={{ width: '100%', height: 2, backgroundColor: 'red', opacity: 0.6 }}></View>
         </View>
     );
-
     return (
         <View style={{ backgroundColor: '#2b090a', flex: 1 }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 10, backgroundColor: '#B91515E8' }}>
@@ -247,14 +315,17 @@ const Winners = ({ navigation }) => {
                     <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={require('../image/notifectionmn.png')} />
                 </TouchableOpacity>
             </View>
-            <View style={{ backgroundColor: '#B91515E8', padding: 10, borderBottomRightRadius: 40, borderBottomLeftRadius: 40 }}>
+            <ScrollView>
+
+                <FlatList data={selectedGame == 'FREE FIRE' ? freede : selectedGame == 'LUDO' ? Ludo : selectedGame == 'FAN BATLE' ? fanbelletler : moere} renderItem={renderItem3} />
+                {/* <View style={{ backgroundColor: '#B91515E8', padding: 10, borderBottomRightRadius: 40, borderBottomLeftRadius: 40 }}>
                 <View style={{ width: '90%', alignSelf: 'center' }}>
                     <View>
                         <View style={{ alignSelf: 'center', alignItems: 'center' }}>
                             <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={require('../image/king.png')} />
                             <Image resizeMode='cover' style={{ width: 70, height: 70 }} source={require('../image/Avatar1.png')} />
-                            <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 'bold' }}>1.Sunil Pardhan</Text>
-                            <Text style={{ color: '#FFFFFF', fontSize: 12, fontWeight: 'bold' }}>Won:₹ 8999.00</Text>
+                            <Text style={{ color: '#FFFFFF', fontSize: 14, fontWeight: 'bold' }}>{item.id}</Text>
+                            <Text style={{ color: '#FFFFFF', fontSize: 12, fontWeight: 'bold' }}>{item.priz}</Text>
                         </View>
                     </View>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -273,77 +344,162 @@ const Winners = ({ navigation }) => {
                         </View>
                     </View>
                 </View>
-            </View>
-            <View
-                style={{
-                    flexDirection: 'row',
-                    justifyContent: 'space-between',
-                    padding: 10,
-                    width: '90%',
-                    alignSelf: 'center',
-                    margin: 10,
-                }}
-            >
-                <TouchableOpacity
+            </View> */}
+                <View
                     style={{
-                        backgroundColor: selectedGame === 'FREE FIRE' ? 'red' : '#FFFFFF',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        borderRadius: 10,
-                        height: 30,
-                        width: 80,
-                        margin: 5,
-                    }}
-                    onPress={() => handleGameClick('FREE FIRE')}
-                >
-                    <Text style={{ color: selectedGame === 'FREE FIRE' ? '#FFFFFF' : '#000000', fontSize: 13, fontWeight: 'bold' }}>FREE FIRE</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={{
-                        backgroundColor: selectedGame === 'LUDO' ? 'red' : '#FFFFFF',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        borderRadius: 10,
-                        height: 30,
-                        width: 80,
-                        margin: 5,
-                    }}
-                    onPress={() => handleGameClick('LUDO')}
-                >
-                    <Text style={{ color: selectedGame === 'LUDO' ? '#FFFFFF' : '#000000', fontSize: 13, fontWeight: 'bold' }}>LUDO</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={{
-                        backgroundColor: selectedGame === 'FAN BATLE' ? 'red' : '#FFFFFF',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        borderRadius: 10,
-                        height: 30,
-                        width: 80,
-                        margin: 5,
-                    }}
-                    onPress={() => handleGameClick('FAN BATLE')}
-                >
-                    <Text style={{ color: selectedGame === 'FAN BATLE' ? '#FFFFFF' : '#000000', fontSize: 13, fontWeight: 'bold' }}>FAN BATLE</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={{
-                        backgroundColor: selectedGame === 'More' ? 'red' : '#FFFFFF',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        borderRadius: 10,
-                        height: 30,
-                        width: 80,
-                        margin: 5,
                         flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        padding: 10,
+                        width: '90%',
+                        alignSelf: 'center',
+                        margin: 10,
                     }}
-                    onPress={() => handleGameClick('More')}
                 >
-                    <Text style={{ color: selectedGame === 'More' ? '#FFFFFF' : '#000000', fontSize: 14, fontWeight: 'bold' }}>More</Text>
-                    <Image resizeMode='contain' style={{ width: 10, height: 10, alignSelf: 'center', left: 4, top: 2 }} source={require('../image/rightarrrow.png')} />
-                </TouchableOpacity>
-            </View>
-            <FlatList data={renderFlatListData()} renderItem={renderItem} />
+                    <TouchableOpacity
+                        style={{
+                            backgroundColor: selectedGame === 'FREE FIRE' ? 'red' : '#FFFFFF',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: 10,
+                            height: 30,
+                            width: 80,
+                            margin: 5,
+                        }}
+                        onPress={() => setSelectedGame('FREE FIRE')}
+                    >
+                        <Text style={{ color: selectedGame === 'FREE FIRE' ? '#FFFFFF' : '#000000', fontSize: 13, fontWeight: 'bold' }}>FREE FIRE</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={{
+                            backgroundColor: selectedGame === 'LUDO' ? 'red' : '#FFFFFF',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: 10,
+                            height: 30,
+                            width: 80,
+                            margin: 5,
+                        }}
+                        onPress={() => setSelectedGame('LUDO')}
+                    >
+                        <Text style={{ color: selectedGame === 'LUDO' ? '#FFFFFF' : '#000000', fontSize: 13, fontWeight: 'bold' }}>LUDO</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={{
+                            backgroundColor: selectedGame === 'FAN BATLE' ? 'red' : '#FFFFFF',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: 10,
+                            height: 30,
+                            width: 80,
+                            margin: 5,
+                        }}
+                        onPress={() => setSelectedGame('FAN BATLE')}
+                    >
+                        <Text style={{ color: selectedGame === 'FAN BATLE' ? '#FFFFFF' : '#000000', fontSize: 13, fontWeight: 'bold' }}>FAN BATLE</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={{
+                            backgroundColor: selectedGame === 'More' ? 'red' : '#FFFFFF',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            borderRadius: 10,
+                            height: 30,
+                            width: 80,
+                            margin: 5,
+                            flexDirection: 'row',
+                        }}
+                        onPress={openModa}
+                    >
+                        <Text style={{ color: selectedGame === 'More' ? '#FFFFFF' : '#000000', fontSize: 14, fontWeight: 'bold' }}>More</Text>
+                        <Image resizeMode='contain' style={{ width: 10, height: 10, alignSelf: 'center', left: 4, top: 2 }} source={require('../image/rightarrrow.png')} />
+                    </TouchableOpacity>
+                </View>
+                <FlatList data={selectedGame == 'FREE FIRE' ? freeFireData : selectedGame == 'LUDO' ? ludoData : fanBattleData} renderItem={renderItem} />
+            </ScrollView>
+            <Modal
+                visible={isModalVisible}
+                // animationType="slide"
+                transparent={true}
+            >
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+                    <View style={{ backgroundColor: '#695E5E', borderRadius: 10, width: '90%' }}>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', backgroundColor: 'red', padding: 10, borderRadius: 10, alignItems: 'center' }}>
+                            <Text style={{ color: '#000000', fontWeight: 'bold', fontSize: 18, }}>LEADERBOARD CATEGORIES</Text>
+                            <TouchableOpacity onPress={closeModa}>
+                                <Image resizeMode='cover' style={{ width: 18, height: 18, }} source={require('../image/cancel.png')} />
+                            </TouchableOpacity>
+                        </View>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '90%', alignSelf: 'center', margin: 10 }}>
+                            <TouchableOpacity  onPress={() => setSelectedGame('LUDO')}>
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, opacity: 0.5 }} source={require('../image/ludo1.png')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>LUDO</Text>
+
+                            </TouchableOpacity>
+                            <TouchableOpacity  onPress={() => setSelectedGame('FREE FIRE')}>
+
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/freefire.jpg')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Free Fire</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity >
+
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/pubg.jpg')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Pubg</Text>
+                            </TouchableOpacity>
+                        </View>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '90%', alignSelf: 'center', margin: 10 }}>
+                            <TouchableOpacity>
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/ludo2.png')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Cliass</Text>
+
+                            </TouchableOpacity>
+                            <TouchableOpacity>
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/Samuray.jpg')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Monster</Text>
+
+                            </TouchableOpacity>
+                            <TouchableOpacity  onPress={() => setSelectedGame('FAN BATLE')}>
+
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/cricket.jpg')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Cricket</Text>
+                            </TouchableOpacity>
+                        </View>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '90%', alignSelf: 'center', margin: 10 }}>
+                            <TouchableOpacity>
+
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/luDo5.png')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>King</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity>
+
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/cheaj.jpg')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Chej</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity>
+
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/game1.jpg')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Shap</Text>
+                            </TouchableOpacity>
+                        </View>
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '90%', alignSelf: 'center', margin: 10 }}>
+                            <TouchableOpacity>
+
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/Candychash.jpg')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Candy</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity>
+
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/mupakcard.jpg')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Cards</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity >
+
+                                <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/Rocket.jpg')} />
+                                <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Rocket</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </View>
+            </Modal>
         </View>
     );
 };

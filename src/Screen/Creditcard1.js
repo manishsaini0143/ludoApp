@@ -24,9 +24,6 @@ const Creditcard1 = ({ navigation }) => {
             <Text style={{ color: '#FFFFFF', fontSize: 16, marginLeft: 20 }}>
                 Expiry: {cardData.expiry}
             </Text>
-            <Text style={{ color: '#FFFFFF', fontSize: 16, marginLeft: 20 }}>
-                CVC: {cardData.cvc}
-            </Text>
         </View>
     );
 }

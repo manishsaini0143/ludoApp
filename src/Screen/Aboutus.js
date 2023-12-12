@@ -126,13 +126,13 @@ const Aboutus = ({ navigation }) => {
 
                         <Image
                             resizeMode='cover'
-                            style={{ width: 20, height: 20,top:5  }}
+                            style={{ width: 20, height: 20, top: 5 }}
                             source={require('../image/downarro1.png')}
                         />
                     </TouchableOpacity>
                 </View>
                 {showGame1Details && (
-                    <View style={{ padding: 10, borderColor: '#FFFFFF', width: '90%', alignSelf: 'center'}}>
+                    <View style={{ padding: 10, borderColor: '#FFFFFF', width: '90%', alignSelf: 'center' }}>
                         <Text style={{ color: '#FFFFFF', fontSize: 16 }}>LUDO Adda</Text>
                         <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Fanbattle</Text>
                         <Text style={{ color: '#FFFFFF', fontSize: 16 }}>Battleground India</Text>
@@ -163,7 +163,7 @@ const Aboutus = ({ navigation }) => {
 
                         <Image
                             resizeMode='cover'
-                            style={{ width: 20, height: 20,top:5  }}
+                            style={{ width: 20, height: 20, top: 5 }}
                             source={require('../image/downarro1.png')}
                         />
                     </TouchableOpacity>
@@ -198,7 +198,7 @@ const Aboutus = ({ navigation }) => {
 
                         <Image
                             resizeMode='cover'
-                            style={{ width: 20, height: 20,top:5  }}
+                            style={{ width: 20, height: 20, top: 5 }}
                             source={require('../image/downarro1.png')}
                         />
                     </TouchableOpacity>

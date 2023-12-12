@@ -85,13 +85,22 @@ const renderItem = ({ item }) => (
 const Games = ({ navigation }) => {
     return (
         <View style={{ backgroundColor: '#2b090a', flex: 1, }}>
-            <TouchableOpacity style={{ left: 10, margin: 5 }} onPress={() => navigation.goBack()}>
+            {/* <TouchableOpacity style={{ left: 10, margin: 5 }} onPress={() => navigation.goBack()}>
                 <Image resizeMode='cover' style={{ width: 25, height: 25, }} source={require('../image/backarrow.png')} />
-            </TouchableOpacity>
+            </TouchableOpacity> */}
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 10 }}>
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <Image resizeMode='cover' style={{ width: 25, height: 25 }} source={require('../image/backarrow.png')} />
+                </TouchableOpacity>
+                <Text style={{ color: '#FFFFFF', fontSize: 20, fontWeight: 'bold' }}>Ludo Auto</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('Notification')}>
+                    <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={require('../image/notifectionmn.png')} />
+                </TouchableOpacity>
+            </View>
             <View>
                 <Text style={{ color: '#FFFFFF', fontSize: 20, marginLeft: 20, top: 10 }}>Create a Battle!</Text>
             </View>
-            <View style={{ margin: 20, borderRadius: 10, backgroundColor: '#FFFFFF', width: '85%', flexDirection: 'row', height: 60 }} >
+            <View style={{borderRadius: 10, backgroundColor: '#FFFFFF', width: '85%', flexDirection: 'row', height: 60,alignSelf:'center',margin:10 }} >
 
                 <TextInput maxLength={10} style={{ color: '#B3B1B1', width: '70%', fontSize: 20, letterSpacing: 2, marginLeft: 20 }} keyboardType='Number-type' placeholder='Amount' placeholderTextColor='#B3B1B1' />
                 <TouchableOpacity>
@@ -109,6 +118,7 @@ const Games = ({ navigation }) => {
                 data={data}
                 renderItem={renderItem}
             />
+            
         </View>
     );
 }

@@ -70,7 +70,7 @@ const setting = ({ navigation }) => {
           <Text style={{ color: '#FFFFFF', fontSize: 20, fontFamily: 'JosefinSans-Bold', bottom: 2.5, opacity: 0.8 }}>Cancellation Policy</Text>
           <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Contactus')} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
+        <TouchableOpacity onPress={() => navigation.navigate('Game3')} style={{ flexDirection: 'row', justifyContent: 'space-between', margin: 10, borderWidth: 1, borderColor: '#FFFFFF', borderRadius: 10, padding: 10, width: '90%', alignSelf: 'center' }}>
           <Text style={{ color: '#FFFFFF', fontSize: 20, fontFamily: 'JosefinSans-Bold', bottom: 2.5, opacity: 0.8 }}>Contact Us</Text>
           <Image resizeMode='contain' style={{ width: 17, height: 17, alignSelf: 'center' }} source={require('../image/rightarrow.png')} />
         </TouchableOpacity>

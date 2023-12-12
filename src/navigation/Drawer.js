@@ -17,7 +17,6 @@ import MyQuiz from '../Screen/MyQuiz';
 import Instagrma from '../Screen/Instagrma';
 import Telegram from '../Screen/Telegram';
 import Winners from '../Screen/Winners';
-
 const Drawers = createDrawerNavigator();
 const CustomDrawerItem = ({ label, imageSource, onPress, backgroundColor }) => (
   <TouchableHighlight
@@ -30,11 +29,9 @@ const CustomDrawerItem = ({ label, imageSource, onPress, backgroundColor }) => (
     </View>
   </TouchableHighlight>
 );
-
 export default function Drawer({ navigation }) {
   const [selectedItem, setSelectedItem] = React.useState('');
   const userProgress = 60;
-
   return (
     <Drawers.Navigator
       screenOptions={{ headerShown: false }}
@@ -49,10 +46,8 @@ export default function Drawer({ navigation }) {
               <View style={{ backgroundColor: '#2b090a', height: 120 }}>
                 {/* onPress={() => navigation.navigate('MyProfile')} */}
                 <TouchableOpacity onPress={() => navigation.navigate('MyProfile')} style={{ top: 10 }}>
-
                   <Image resizeMode='contain' style={{ alignSelf: 'center', width: 50, height: 50 }} source={require('../image/Avatar1.png')} />
                   <TouchableOpacity>
-
                     <Image resizeMode='contain' style={{ width: 18, height: 18, zIndex: 1, position: 'absolute', bottom: 5, right: 110 }} source={require('../image/pen.png')} />
                   </TouchableOpacity>
                   <Text style={{ color: '#FFFFFF', fontSize: 16, textAlign: 'center', fontFamily: 'JosefinSans-Bold' }}>
@@ -69,10 +64,8 @@ export default function Drawer({ navigation }) {
                   style={{ marginTop: 10 }}
                 />
               </View>
-
             </View>
             <ScrollView>
-
               <CustomDrawerItem
                 label="Home"
                 imageSource={require('../image/Home3.png')}
@@ -82,14 +75,14 @@ export default function Drawer({ navigation }) {
                 }}
                 backgroundColor={selectedItem === 'Home' ? 'red' : 'red'} />
 
-              <CustomDrawerItem
+              {/* <CustomDrawerItem
                 label="Profile"
                 imageSource={require('../image/Profile3.png')}
                 onPress={() => {
                   props.navigation.navigate('Profile');
                   setSelectedItem('Profile');
                 }}
-                backgroundColor={selectedItem === 'Profile' ? 'red' : 'red'} />
+                backgroundColor={selectedItem === 'Profile' ? 'red' : 'red'} /> */}
               <CustomDrawerItem
                 label="My Profile"
                 imageSource={require('../image/Profile3.png')}
@@ -106,7 +99,6 @@ export default function Drawer({ navigation }) {
                   setSelectedItem('GameHistory');
                 }}
                 backgroundColor={selectedItem === 'GameHistory' ? 'red' : 'red'} />
-
               <CustomDrawerItem
                 label="Transaction History"
                 imageSource={require('../image/transaction3.png')}
@@ -208,12 +200,9 @@ export default function Drawer({ navigation }) {
                 }}
                 backgroundColor={selectedItem === 'Youtube' ? 'red' : 'red'} />
             </ScrollView>
-
-
           </View>
         );
-      }}
-    >
+      }}>
       <Drawers.Screen name="Home" component={BottomTab} />
       <Drawers.Screen name="Profile" component={Profile} />
       <Drawers.Screen name="Setting" component={setting} />

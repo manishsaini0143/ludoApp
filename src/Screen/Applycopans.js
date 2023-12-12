@@ -90,7 +90,6 @@ const Applycopans = ({ navigation }) => {
                     <Text style={{ color: '#FFFFFF', fontSize: 16, fontFamily: 'JosefinSans-Bold', padding: 5 }}>{item.enter}</Text>
                 </View>
             </TouchableOpacity>
-
         </View>
     );
 
