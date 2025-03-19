@@ -37,7 +37,8 @@ import Super from '../Screen/Super';
 import Cricketgame from '../Screen/Cricketgame';
 import Fanbattle from '../Screen/Fanbattle';
 import Clashx from '../Screen/Clashx';
-
+import Supercoin from '../Screen/Supercoin';
+import Rummyadcoin from '../Screen/Rummyadcoin';
 
 const Stack = createNativeStackNavigator();
 
@@ -80,6 +81,9 @@ const StackNavigation = () => {
         <Stack.Screen name="Cricketgame" component={Cricketgame} />
         <Stack.Screen name="Fanbattle" component={Fanbattle} />
         <Stack.Screen name="Clashx" component={Clashx} />
+        <Stack.Screen name="Supercoin" component={Supercoin} />
+        <Stack.Screen name="Rummyadcoin" component={Rummyadcoin} />
+        
         {/* <Stack.Screen name="CreditCard" component={CreditCard} /> */}
 
       </Stack.Navigator>

@@ -36,9 +36,9 @@ const Winners = ({ navigation }) => {
             image02: require('../image/king2.png'),
             image03: require('../image/king3.png'),
             image1: require('../image/Avatar1.png'),
-            id1: '1.Aman Pardhan',
-            id2: '2.Vikash Pardhan',
-            id3: '3.Aashish Pardhan',
+            id1: '1.aunil Pardhan',
+            id2: '2.Sundip Pardhan',
+            id3: '3.Dinesh Pardhan',
             priz1: 'Won:₹ 8999.00',
             priz2: 'Won:₹ 6999.00',
             priz3: 'Won:₹ 4999.00',
@@ -51,15 +51,14 @@ const Winners = ({ navigation }) => {
             image02: require('../image/king2.png'),
             image03: require('../image/king3.png'),
             image1: require('../image/Avatar1.png'),
-            id1: '1.Nitesh Bagda',
-            id2: '2.Rahul Bagda',
-            id3: '3.Sonu Sharma',
+            id1: '1.Sunil Pardhan',
+            id2: '2.Deepak Pardhan',
+            id3: '3.Dinesh Pardhan',
             priz1: 'Won:₹ 8999.00',
             priz2: 'Won:₹ 6999.00',
             priz3: 'Won:₹ 4999.00',
         },
     ];
-
     const freeFireData = [
         {
             key: '1',
@@ -126,7 +125,6 @@ const Winners = ({ navigation }) => {
         },
 
     ];
-
     const ludoData = [
         {
             key: '1',
@@ -193,7 +191,6 @@ const Winners = ({ navigation }) => {
             rank: '#12'
         },
     ];
-
     const fanBattleData = [
         {
             key: '1',
@@ -430,12 +427,12 @@ const Winners = ({ navigation }) => {
                             </TouchableOpacity>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-around', width: '90%', alignSelf: 'center', margin: 10 }}>
-                            <TouchableOpacity  onPress={() => setSelectedGame('LUDO')}>
+                            <TouchableOpacity onPress={() => setSelectedGame('LUDO')}>
                                 <Image resizeMode='cover' style={{ width: 90, height: 90, opacity: 0.5 }} source={require('../image/ludo1.png')} />
                                 <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>LUDO</Text>
 
                             </TouchableOpacity>
-                            <TouchableOpacity  onPress={() => setSelectedGame('FREE FIRE')}>
+                            <TouchableOpacity onPress={() => setSelectedGame('FREE FIRE')}>
 
                                 <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/freefire.jpg')} />
                                 <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Free Fire</Text>
@@ -457,7 +454,7 @@ const Winners = ({ navigation }) => {
                                 <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Monster</Text>
 
                             </TouchableOpacity>
-                            <TouchableOpacity  onPress={() => setSelectedGame('FAN BATLE')}>
+                            <TouchableOpacity onPress={() => setSelectedGame('FAN BATLE')}>
 
                                 <Image resizeMode='cover' style={{ width: 90, height: 90, borderRadius: 10, opacity: 0.5 }} source={require('../image/cricket.jpg')} />
                                 <Text style={{ color: '#FFFFFF', fontWeight: 'bold', fontSize: 22, position: 'absolute', zIndex: 1, alignSelf: 'center', top: 30 }}>Cricket</Text>

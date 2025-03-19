@@ -1,7 +1,6 @@
 import React from 'react';
-import { View, Text ,TouchableOpacity,Image} from 'react-native';
-
-const Tutorial = ({navigation}) => {
+import { View, Text, TouchableOpacity, Image } from 'react-native';
+const Tutorial = ({ navigation }) => {
     return (
         <View style={{ backgroundColor: '#2b090a', flex: 1, }}>
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', padding: 10 }}>
@@ -14,6 +13,8 @@ const Tutorial = ({navigation}) => {
                     <Image resizeMode='cover' style={{ width: 30, height: 30 }} source={require('../image/notifectionmn.png')} />
                 </TouchableOpacity>
             </View>
+            
+           
         </View>
     );
 }
